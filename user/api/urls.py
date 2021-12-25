@@ -5,8 +5,8 @@ from .views import registration_view, UserDetails, UserList    # logout_view
 
 urlpatterns = [
     path('register/', registration_view, name='register'),
-    path('user/<int:pk>', UserDetails.as_view(), name='user_details'),
-    path('user/', UserList.as_view(), name='user_list'),
+    path('<int:pk>', UserDetails.as_view(), name='user_details'),
+    path('', UserList.as_view(), name='user_list'),
 
 
     # JWT Part.
